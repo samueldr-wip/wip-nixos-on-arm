@@ -18,6 +18,8 @@ in
     boot.kernelParams = mkAfter [
       "console=ttyFIQ0,115200n8"
       "console=ttyS2,115200n8"
+      "earlycon=uart8250,mmio32,0xfeb50000"
+      "earlyprintk"
     ];
     nixpkgs.overlays = [
       (final: super: {
