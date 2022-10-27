@@ -51,6 +51,15 @@ buildLinux (args // rec {
 
     # This is not a good console...
     # FIQ_DEBUGGER = no;
+    # TODO: Fix 8250 console not binding as a console
+
+    # from vendor config
+    #DRM_DP = no; # ????? does not build with it disabled ffs
+    DRM_DEBUG_SELFTEST = no;
+
+    # Ugh...
+    ROCKCHIP_DEBUG = no;
+    RK_CONSOLE_THREAD = no;
   };
 
   src = fetchFromGitHub {
