@@ -51,6 +51,8 @@ let
       eval = evalWith { };
 
       inherit (eval) pkgs;
+
+      inherit (eval.config.boot.kernelPackages) kernel;
     }
   ;
 in
