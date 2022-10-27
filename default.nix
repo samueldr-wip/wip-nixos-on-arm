@@ -44,6 +44,10 @@ let
         evalWith ./modules/rootfs.nix
       ).config.system.build.rootfsImage;
 
+      isoUEFI = (
+        evalWith ./modules/isoUEFI.nix
+      ).config.system.build.isoImage;
+
       eval = evalWith { };
 
       inherit (eval) pkgs;
