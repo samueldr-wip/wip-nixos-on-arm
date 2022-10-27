@@ -53,11 +53,11 @@ buildLinux (args // rec {
     # FIQ_DEBUGGER = no;
   };
 
-  #src = fetchFromGitHub {
-  #  owner = "radxa";
-  #  repo = "kernel"; # stable-5.10-rock5
-  #  rev = "1d6f7d7596b0cca773446bb361a00a0dcf8f2135";
-  #  hash = "sha256-65GkjG9avOHrbsUpf3+II93SCY2jul7NVGHMakJ3R6Y=";
-  #};
-  src = builtins.fetchGit /Users/samuel/tmp/linux/radxa-rock5-bsp;
+  src = fetchFromGitHub {
+    owner = "radxa";
+    repo = "kernel"; # stable-5.10-rock5
+    rev = "1d6f7d7596b0cca773446bb361a00a0dcf8f2135";
+    hash = "sha256-65GkjG9avOHrbsUpf3+II93SCY2jul7NVGHMakJ3R6Y=";
+  };
+  #src = builtins.fetchGit /Users/samuel/tmp/linux/radxa-rock5-bsp;
 } // (args.argsOverride or { }))
