@@ -28,7 +28,6 @@ in
           kernelPatches = [
             final.kernelPatches.bridge_stp_helper
             final.kernelPatches.request_key_helper
-            { patch = ./kernel/0001-BSP-disable-vendor-kludge-around-overlays.patch; }
           ];
         };
 

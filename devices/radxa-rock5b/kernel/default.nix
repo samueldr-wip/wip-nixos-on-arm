@@ -63,10 +63,10 @@ buildLinux (args // rec {
   };
 
   src = fetchFromGitHub {
-    owner = "radxa";
-    repo = "kernel"; # stable-5.10-rock5
-    rev = "1d6f7d7596b0cca773446bb361a00a0dcf8f2135";
-    hash = "sha256-65GkjG9avOHrbsUpf3+II93SCY2jul7NVGHMakJ3R6Y=";
+    owner = "samueldr";
+    repo = "linux"; # stable-5.10-rock5
+    rev = "4a98e925d0f198d5ec79ecb09d91e5ca3fe6792e";
+    hash = "sha256-TyoUyMjqNLNo1qCXJBkPSshpYbq8DN2ciCUqUfIqecQ=";
   };
   #src = builtins.fetchGit /Users/samuel/tmp/linux/radxa-rock5-bsp;
 } // (args.argsOverride or { }))
