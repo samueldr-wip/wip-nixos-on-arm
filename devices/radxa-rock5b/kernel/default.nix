@@ -8,7 +8,7 @@ let
     versions
   ;
 
-  kernelVersion = "5.10.66";
+  kernelVersion = "5.10.110";
   vendorVersion = "";
 in
 buildLinux (args // rec {
@@ -64,9 +64,9 @@ buildLinux (args // rec {
 
   src = fetchFromGitHub {
     owner = "samueldr";
-    repo = "linux"; # based on radxa's stable-5.10-rock5
-    rev = "1b71d091c8652f74752c95492beea9ebd2e3e525";
-    hash = "sha256-bJDT4BypIccpqR3rM1L2y4zH0mK/cskTxOwufL4lNFM=";
+    repo = "linux"; # based on radxa's linux-5.10-gen-rkr3.4
+    rev = "11125ef30363f574fcccc2354aa9bf0948752eda";
+    hash = "sha256-FAhC17ccRoDaQAMfrC5jQocLmA1butFw4VfnxOKLFPE=";
   };
-  #src = builtins.fetchGit /Users/samuel/tmp/linux/radxa-rock5-bsp;
+  #src = builtins.fetchGit ~/tmp/linux/radxa-rock5-bsp;
 } // (args.argsOverride or { }))
